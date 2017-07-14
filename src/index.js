@@ -5,11 +5,20 @@ import YTSearch from 'youtube-api-search'
 
 const API_Key = 'AIzaSyBo01JP2fQkPzwHFLHIr2cXndIGj-P3Tgk';
 
-YTSearch({key: API_Key, term: 'surfboards'}, function(data){
-  console.log(data)
-})
+
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      videos: []
+    }
+
+    YTSearch({key: API_Key, term: 'surfboards'}, (video) => {
+      this.setState({ video })
+      //whenever key and value of an object are the same strings, key:value can be condensed in ES6 as { value }
+    })
+  }
   render() {
     return (
       <div>
