@@ -12,7 +12,7 @@ const VideoListItem = ({video, onVideoSelect}) => {
          <img className="media-object" src={imageUrl} alt="Generic placeholder image" />
         </div>
         <div className="media-body">
-          <h5 className="media-heading">{title}</h5>
+          <div className="media-heading">{title}</div>
         </div>
        </div>
     </li>
