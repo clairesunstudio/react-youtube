@@ -5,15 +5,16 @@ const VideoListItem = ({video}) => {
   const imageUrl = video.snippet.thumbnails.default.url
   const { title, description } = video.snippet
   return (
-    <li>
-        <div className="card" style={{width: '20rem'}}>
 
-          <div className="card-block">
-            <h4 className="card-title">{title}</h4>
-            <p className="card-text">{description}</p>
-          </div>
-            <img className="card-img-bottom" src={imageUrl} alt="Card image cap" />
+    <li className="list-group-item">
+       <div className="video-list media">
+        <div className="media-left">
+         <img className="media-object" src={imageUrl} alt="Generic placeholder image" />
         </div>
+        <div className="media-body">
+          <h5 className="media-heading">{title}</h5>
+        </div>
+       </div>
     </li>
   )
 

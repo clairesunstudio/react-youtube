@@ -8,9 +8,10 @@ const VideoList = (props) => {
   //props will arrive as argument to the functional component
   console.log(props)
   return(
-    <ul className="list-inline">
+    <ul className="list-unstyled col-md-4">
       {videoItems}
     </ul>
+
   )
 }
 
